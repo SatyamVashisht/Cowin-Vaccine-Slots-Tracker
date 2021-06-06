@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>COVID SLOTS TRACKER</title>
+
+</head>
+
+<body>
+    <nav class="navbar background">
+        <nav class="navbar-left">
+            <div class="logo"><img src="../img/logo.jpg" alt="LOGO"></div>
+        </nav>
+        <nav class="navbar-right">
+            <li> <a href="#home">HOME</a></li>
+            <li> <a href="#register">REGISTER</a></li>
+            <li> <a href="#slots">SLOTS TRACKER</a></li>
+        </nav>
+    </nav>
+    <section class="banner">
+        <div class="firstHalf banner">
+            <img src="../img/modi.jpg" alt="BANNER">
+        </div>
+        <div class="quote-section">
+            <div class="image-quote">
+                <img src="https://source.unsplash.com/1600x900/?covid-19,vaccine" alt="CORONA IMAGE">
+            </div>
+            <div class="secondHalf">
+                <p class="quote">
+                    " I'd much rather have a vaccine than have the Virus "
+                </p>
+            </div>
+            <div class="image-quote">
+                <img src="https://source.unsplash.com/1600x900/?vaccine,covid-19" alt="CORONA IMAGE">
+            </div>
+        </div>
+    </section>
+    <section class="register">
+        <div class="register-image">
+            <img src="../img/register.jpg" alt="REGISTER">
+        </div>
+        <div class="register-table">
+            <p class="headingregister">Register</p>
+            <p class="Tag">Fill the below Form and get notified on Telegram and E-mail when Vaccine Slots are available
+                in your Area</p>
+            <div class="input-register">
+                <input type="text" class="input" placeholder="Name">
+                <input type="text" class="input" placeholder="Whatsapp Number">
+                <input type="text" class="input" placeholder="E-Mail">
+                <input type="text" class="input" placeholder="Pincode">
+                <button class="register-btn" value="Reset" onclick="register()">Sumbit</button>
+            </div>
+        </div>
+    </section>
+    <section class="slots">
+        <div class="tag-line">
+            <p class="slots-tag">Check your nearest vaccination center and slots availability</p>
+        </div>
+        <div class="container">
+            <input type="radio" name="size" onclick="show(0)" id="small" checked="checked">
+            <label for="small">Search by PINCODE</label>
+            <input type="radio" name="size" onclick="show(1)" id="large">
+            <label for="large">Search by Districts</label>
+        </div>
+        <hr>
+        <div class="pincode-discricts">
+            <div class="pincode">
+                <input type="text" class="slots-input" id="slot-pincode" placeholder="Pincode">
+                <button class="btn" onclick="showhide()">Sumbit</button>
+            </div>
+        </div>
+    </section>
+    <div id="hidden">
+        <section class="data">
+            <table class="content-table">
+                <tr class="bg-info">
+                    <th>DATE</th>
+                    <th>CENTER NAME</th>
+                    <th>CENTER ADDRESS</th>
+                    <th>VACCINE NAME</th>
+                    <th>SLOTS: DOSE 1</th>
+                    <th>SLOTS: DOSE 2</th>
+                </tr>
+                <tbody id="myTable">
+
+
+                </tbody>
+
+            </table>
+
+        </section>
+    </div>
+    <script>
+    mytable(data);
+    function mytable(data1) {
+        var table = document.getElementById('myTable')
+        for (var i = 0; i < data1.length; i++) {
+            var row = `<tr>
+                                    <td>${data1[i].date}</td>
+                                    <td>${data1[i].name}</td>
+                                    <td>${data1[i].address}</td>
+                                    <td>${data1[i].vaccine}</td>
+                                    <td>${data1[i].available_capacity_dose1}</td>
+                                    <td>${data1[i].available_capacity_dose2}</td>
+                                </tr>
+    `
+            table.innerHTML += row
+        }
+    
+    
+    }
+</script>
+    
+    
+    let btn = document.querySelector('btn');
+    let div = document.querySelector('hidden');
+    btn.addEventListener('click', () => {
+        if (div.style.display == 'none') {
+            div.style.display = 'block';
+        } else {
+            div.style.display = 'none';
+        }
+    })
+    
+    
+    <script src="../bin/cowin.js">
+    </script>
+    <script>
+        let button = document.querySelector("register-btn");
+        let inputs = document.querySelectorAll("input");
+
+        button.addEventListener('click', () => {
+            inputs.forEach(input => input.value = '');
+        });
+    </script>
+    <footer class="footer">
+        <img src="../img/last.JPG" alt="FOOTER">
+    </footer>
+
+
+</body>
+
+</html>

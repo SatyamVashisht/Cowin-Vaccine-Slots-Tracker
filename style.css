@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top:0;
+    cursor:pointer;
+}
+.navbar-left{
+    width: 25%;
+}
+.navbar-right{
+    width: 75%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.navbar-right li{
+    list-style: none;
+    text-decoration: none;
+    padding-left: 19%;
+    
+}
+.navbar-right li a{
+    color: white;
+    text-decoration: none;
+}
+.navbar-right li a:hover{
+    color: grey;
+}
+.logo img{
+    width: 140px;
+}
+.background{
+    background :#081c64;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.banner img{
+    max-width: 100%;
+}
+.quote{
+    text-align: center;
+    padding: 75px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+}
+.quote-section{
+    display: flex;
+    max-width: 100%;
+}
+.image-quote img{
+    border: 3px solid #062369;
+    border-radius: 50px;
+    margin: 32px;
+    width: 190px;
+}
+.register{
+    display: flex;
+}
+.register-image img{
+    max-width: 95%;
+    margin: 35px -10px;
+    border: 3px solid #081c64;
+}
+.register-table{
+    width: 58%;
+    background: #081c64;
+    margin: 30px;
+    color: white;
+    margin:35px auto;
+    margin-right: 34px;
+    padding: 30px;
+    border-radius: 5px;
+    flex-direction: row;
+    box-shadow: 0 0 10px rgba(0,0,0,0.13);
+
+}
+.headingregister{
+    font-family: 'Josefin Sans', sans-serif;   
+    text-align: center;
+    font-size: 46px;
+}
+.Tag{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    margin: 15px;
+    text-align: center;
+}
+.input-register{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+    margin-left: 130px;
+    margin-top: 50px;
+}
+
+.input-register,
+msg{
+    width: 48%;
+}
+
+.input-register .input ,
+msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    width: 100%;
+    color: white;
+}
+.msg textarea{
+    height: 212px;
+}
+::-webkit-input-placeholder{
+    color: white;
+}
+.register-btn{
+    background: #081c64;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 39px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 7%;
+     
+}
+.slots-tag{
+    text-align: center;
+    padding: 75px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+transform: translate(-50%,-50%);
+    position: absolute;
+    /* top:50%; */
+    left:50%;
+    margin-top: -18px;
+    display: flex;
+}
+input[type="radio"]{
+    display: none;
+}
+label{
+    position:relative;
+    color: #081c64;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 19px;
+    border:2px solid #081c64;
+    border-radius:5px;
+    padding:10px 50px;
+    display: flex;
+    margin: 0 30PX;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.label::before{
+    position: absolute;
+    content: "";
+    height:30px;
+    width:30px;
+    border:3px solid #081c64;
+    border-radius: 20px;
+    margin-right: 20px;
+
+}
+input[type="radio"]:checked + label{
+    background-color: #081c64;
+    color: white;
+}
+input[type="radio"]:checked + label::before{
+    height: 16px;
+    width:16px;
+    border:10px solid white;
+    background-color: #081c64;
+    color: white;
+}
+.slots-input ,
+msg textarea{
+
+    margin: 10px 0;
+    background: #081c64;
+    border: 0;
+    /* border-bottom: 2px solid #081c64; */
+    border-radius: 2px solid white;
+    border-radius: 30px;
+    padding: 10px;
+    width: 168px;
+    color: white;
+}
+::-webkit-input-placeholder{
+    color: white;
+}
+.btn{
+    background: #081c64;
+    text-align: center;
+    padding: 10px;
+    margin-left: 25px;
+    border-radius: 25px;
+    /* margin-bottom: 39px; */
+    color: white;
+    cursor: pointer;
+    /* text-transform: uppercase; */
+    margin-top: 5%;
+}
+hr{
+    margin: 45px;
+}
+.pincode{
+    margin-left: 550px;
+    margin-top: 20px;
+}
+
+.pincode-discricts{
+margin-top: -47px;
+}
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width:400px;
+}
+#myTable{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+.bg-info{
+    background-color: #062369;
+    color: white;
+    text-align: left;
+    text-align: center;
+    font-weight: bold;
+}
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+.content-table tbody tr{
+    border-bottom:1px solid #dddddd;
+}
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #062369;
+}
+.footer img{
+    margin-top: 30px;
+    /* margin-right: 38px; */
+    width: 100%;
+}
+#hidden{
+display: none;
+}
+/* #home{
+position: relative;
+}
+#register{
+position: relative;
+}
+#slots{
+    position: relative;
+    } */
